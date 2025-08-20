@@ -7,15 +7,15 @@ const nodemailer = require("nodemailer");
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "hotelsherpasoul02@gmail.com", // Admin/System email for sending
-    pass: "beywtltmbrabgyoz", // Replace with valid App Password
+    user: "baroonshrestha02@gmail.com", // Admin/System email for sending
+    pass: "bgnwktovravqrxpz", // Replace with valid App Password
   },
 });
 
 // Function to send booking confirmation email
 const sendBookingConfirmationEmail = async (booking, room) => {
-  const adminEmail = "hotelsherpasoul02@gmail.com";
-  const hotelContact = "hotelsherpasoul02@gmail.com";
+  const adminEmail = "";
+  const hotelContact = "baroonshrestha02@gmail.com";
   const hotelName = "Hotel Sherpa Soul";
   const logoUrl =
     "https://res.cloudinary.com/dbwu2fxcs/image/upload/v1754897503/debuudw3pdlpiiwlfypt.png"; // Replace with actual hotel logo URL
@@ -485,6 +485,5 @@ const createBooking = async (req, res) => {
     });
   }
 };
-
 
 module.exports = { createBooking };
