@@ -19,7 +19,6 @@ const bookingSchema = new mongoose.Schema(
     roomType: {
       type: String,
       trim: true,
-      enum: ["Single Bed", "Single Double Bed", "Double Bed"],
     },
     numberOfGuests: {
       type: Number,

@@ -9,10 +9,21 @@ const { database } = require("./Database/database");
 
 const app = express();
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "http://localhost:5174",
+  "https://yourdomain.com",
+  "https://hotel-sherpa-soul.vercel.app",
+];
+
 app.use(
   cors({
     origin: (origin, callback) => {
-      callback(null, origin || "*"); // Allow any origin dynamically
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true); // Allow request
+      } else {
+        callback(new Error("Not allowed by CORS")); // Block request
+      }
     },
     credentials: true,
   })
