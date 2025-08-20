@@ -14,7 +14,7 @@ const transporter = nodemailer.createTransport({
 
 // Function to send booking confirmation email
 const sendBookingConfirmationEmail = async (booking, room) => {
-  const adminEmail = "";
+  const adminEmail = "baroonshrestha02@gmail.com";
   const hotelContact = "baroonshrestha02@gmail.com";
   const hotelName = "Hotel Sherpa Soul";
   const logoUrl =
